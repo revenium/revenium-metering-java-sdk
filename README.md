@@ -1,8 +1,8 @@
-# swagger-java-client
+# revenium-metering
 
 Revenium Metering API
 - API version: 1.14.0-SNAPSHOT
-  - Build date: 2024-03-04T16:04:18.986626-05:00[America/New_York]
+  - Build date: 2024-03-04T16:29:09.827692-05:00[America/New_York]
 
 Revenium Metering API
 
@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 ```xml
 <dependency>
   <groupId>io.swagger</groupId>
-  <artifactId>swagger-java-client</artifactId>
+  <artifactId>revenium-metering</artifactId>
   <version>1.0.0</version>
   <scope>compile</scope>
 </dependency>
@@ -51,7 +51,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "io.swagger:swagger-java-client:1.0.0"
+compile "io.swagger:revenium-metering:1.0.0"
 ```
 
 ### Others
@@ -64,7 +64,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/swagger-java-client-1.0.0.jar`
+* `target/revenium-metering-1.0.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
