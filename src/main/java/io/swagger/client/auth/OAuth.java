@@ -14,10 +14,11 @@ package io.swagger.client.auth;
 
 import io.swagger.client.Pair;
 
+import javax.annotation.processing.Generated;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-03-04T16:29:09.827692-05:00[America/New_York]")
+@Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-03-04T16:29:09.827692-05:00[America/New_York]")
 public class OAuth implements Authentication {
   private String accessToken;
 
