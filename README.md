@@ -72,24 +72,28 @@ Then manually install the following JARs:
 Please follow the [installation](#installation) instruction and execute the following Java code:
 
 ```java
+package org.example;
 import io.swagger.client.*;
-import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
-import io.swagger.client.api.EventsApi;
+import io.swagger.client.api.MetringApi;
 
-import java.io.File;
-import java.util.*;
+public class Main {
+    public static void main(String[] args)  {
+        ApiClient client = new ApiClient();
+        client.setBasePath("https://api.revenium.io/meter/v1/api");
+        client.addDefaultHeader("x-api-key", "your_api_key");
+        MetringApi meterApi = new MetringApi(client);
 
-public class EventsApiExample {
+        MeteringRequestDTO request = new MeteringRequestDTO();
+        request.method("GET");
+        request.url("/api/1");
+        request.application("77273cd5-02be-46da-8022-87e237f25393");
+        request.setResponseCode(200);
+        request.remoteHost("65.89.56.105");
 
-    public static void main(String[] args) {
-        
-        EventsApi apiInstance = new EventsApi();
-        ApiEventDTO body = new ApiEventDTO(); // ApiEventDTO | 
         try {
-            apiInstance.saveEvent(body);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling EventsApi#saveEvent");
+            meterApi.meter(request);
+        }catch (Exception e){
             e.printStackTrace();
         }
     }
