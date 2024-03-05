@@ -84,7 +84,7 @@ if(hasProperty('target') && target == 'android') {
     publishing {
         publications {
             maven(MavenPublication) {
-               artifactId = 'swagger-java-client'
+               artifactId = 'revenium-metering'
                from components.java
             }
         }
