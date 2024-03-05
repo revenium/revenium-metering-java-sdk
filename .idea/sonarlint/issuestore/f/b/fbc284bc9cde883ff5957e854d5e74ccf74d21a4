@@ -1,0 +1,16 @@
+
+Q
+java:S1141Ò"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+g
+java:S1301¯"KReplace this "switch" statement by "if" statements to increase readability.(¿Õº™ùÿÿÿÿ
+g
+java:S1301Û"KReplace this "switch" statement by "if" statements to increase readability.(¿Õº™ùÿÿÿÿ
+g
+java:S1301•"KReplace this "switch" statement by "if" statements to increase readability.(¿Õº™ùÿÿÿÿ
+g
+java:S1301Ì"KReplace this "switch" statement by "if" statements to increase readability.(¿Õº™ùÿÿÿÿ
+R	java:S125Š"<This block of commented-out lines of code should be removed.(¹ÂÙ‡
+U
+java:S11449":Remove this unused private "getDiscriminatorValue" method.(Çùââùÿÿÿÿ
+R
+java:S1144A"<Remove this unused private "getClassByDiscriminator" method.(£·Ž

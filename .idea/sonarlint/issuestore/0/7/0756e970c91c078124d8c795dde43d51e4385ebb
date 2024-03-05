@@ -1,0 +1,31 @@
+
+o
+java:S2293G"YReplace the type specification in this constructor call with the diamond operator ("<>").(çïéÛ
+o
+java:S2293H"YReplace the type specification in this constructor call with the diamond operator ("<>").(ª‚Èâ
+t
+java:S2293J"YReplace the type specification in this constructor call with the diamond operator ("<>").(–¦…üÿÿÿÿ
+t
+java:S2293L"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÕòÅıÿÿÿÿ
+p
+java:S2293Ä"YReplace the type specification in this constructor call with the diamond operator ("<>").(çïéÛ
+p
+java:S2293Å"YReplace the type specification in this constructor call with the diamond operator ("<>").(ª‚Èâ
+u
+java:S2293Ë"YReplace the type specification in this constructor call with the diamond operator ("<>").(–¦…üÿÿÿÿ
+u
+java:S2293Í"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÕòÅıÿÿÿÿ
+r
+java:S1488q"\Immediately return this expression instead of assigning it to the temporary variable "call".(àõìª
+s
+java:S1488î"\Immediately return this expression instead of assigning it to the temporary variable "call".(ˆ¨ÛÃ
+^
+java:S3973Æ"GUse indentation to denote the code conditionally executed by this "if".(¢‘ªË
+c
+java:S3973È"GUse indentation to denote the code conditionally executed by this "if".(şãæ’üÿÿÿÿ
+£
+java:S2681È"†This line will not be executed conditionally; only the first line of this 2-line block will be. The rest will execute unconditionally.(şãæ’üÿÿÿÿ
+\
+java:S1075E"ARefactor your code to get this URI from a customizable parameter.(½òÈšÿÿÿÿÿ
+]
+java:S1075Â"ARefactor your code to get this URI from a customizable parameter.(‰Ïâòùÿÿÿÿ

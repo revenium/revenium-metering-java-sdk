@@ -21,6 +21,8 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.client.model.ElementDTO;
 import io.swagger.v3.oas.annotations.media.Schema;
+
+import javax.annotation.processing.Generated;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +30,7 @@ import java.util.List;
  * MeteringRequestDTO
  */
 
-@Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-03-04T16:29:09.827692-05:00[America/New_York]")
+@Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-03-04T21:22:53.110843-05:00[America/New_York]")
 
 public class MeteringRequestDTO {
   @SerializedName("api")
