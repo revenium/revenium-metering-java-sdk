@@ -81,7 +81,7 @@ public class Main {
     public static void main(String[] args)  {
         ApiClient client = new ApiClient();
         client.setBasePath("https://api.revenium.io/meter/v1/api");
-        client.addDefaultHeader("x-api-key", "your_api_key");
+        client.setApiKey("your_api_key");
         MetringApi meterApi = new MetringApi(client);
 
         MeteringRequestDTO request = new MeteringRequestDTO();
