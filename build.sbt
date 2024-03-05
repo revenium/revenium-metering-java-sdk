@@ -1,6 +1,6 @@
 lazy val root = (project in file(".")).
   settings(
-    organization := "io.swagger",
+    organization := "io.revenium",
     name := "revenium-metering",
     version := "1.0.0",
     scalaVersion := "2.11.4",

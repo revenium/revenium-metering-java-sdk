@@ -301,13 +301,7 @@ public class ApiClient {
      * @param apiKey API key
      */
     public void setApiKey(String apiKey) {
-        for (Authentication auth : authentications.values()) {
-            if (auth instanceof ApiKeyAuth) {
-                ((ApiKeyAuth) auth).setApiKey(apiKey);
-                return;
-            }
-        }
-        throw new RuntimeException("No API key authentication configured!");
+        this.addDefaultHeader("x-api-key", apiKey);
     }
 
     /**

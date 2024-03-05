@@ -2,7 +2,7 @@
 
 Revenium Metering API
 - API version: 1.14.0-SNAPSHOT
-  - Build date: 2024-03-05T09:53:32.938262-05:00[America/New_York]
+  - Build date: 2024-03-05T14:57:18.128456-05:00[America/New_York]
 
 Revenium Metering API
 
@@ -39,7 +39,7 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>io.swagger</groupId>
+  <groupId>io.revenium</groupId>
   <artifactId>revenium-metering</artifactId>
   <version>1.0.0</version>
   <scope>compile</scope>
@@ -51,7 +51,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "io.swagger:revenium-metering:1.0.0"
+compile "io.revenium:revenium-metering:1.0.0"
 ```
 
 ### Others
