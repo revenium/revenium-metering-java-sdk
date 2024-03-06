@@ -77,6 +77,8 @@ import io.swagger.client.*;
 import io.swagger.client.model.*;
 import io.swagger.client.api.MetringApi;
 
+import java.util.Collections;
+
 public class Main {
     public static void main(String[] args)  {
         ApiClient client = new ApiClient();
@@ -85,12 +87,24 @@ public class Main {
         MetringApi meterApi = new MetringApi(client);
 
         MeteringRequestDTO request = new MeteringRequestDTO();
-        request.method("GET");
-        request.url("/api/1");
-        request.application("77273cd5-02be-46da-8022-87e237f25393");
-        request.setResponseCode(200);
-        request.remoteHost("65.89.56.105");
-
+        request.method("GET"); //required
+        request.url("/api/1"); //required
+        request.application("77273cd5-02be-46da-8022-87e237f25393"); //required
+        request.setResponseCode(200); //required
+        request.remoteHost("65.89.56.105"); //optional
+        request.setRequestHeaders(Collections.emptyList()); //required but can be empty
+        request.setResponseHeaders(Collections.emptyList()); //required but can be empty
+        request.metadata("5"); //required
+        request.backendLatency(100.0); //optional
+        request.gatewayLatency(14.0); //optional
+        request.timedOut(false); //optional
+        request.requestMessageSize(1024L); //optional
+        request.responseMessageSize(4096L); //optional
+        request.remoteUser("foo@gmail.com"); //optional
+        request.contentType("application/json"); //optional
+        request.correlationId("3b3e9685-99e9-4f2d-9cd7-6c8de3cff2ae"); //optional
+        request.httpProtocol("https"); //optional
+        
         try {
             meterApi.meter(request);
         }catch (Exception e){
