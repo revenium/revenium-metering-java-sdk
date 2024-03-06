@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**api** | **String** |  |  [optional]
+**api** | **String** | URL of API |  [optional]
 **productKey** | **String** | The Product Key ID |  [optional]
 **application** | **String** | The Application ID |  [optional]
 **method** | **String** | The HTTP method being invoked | 
