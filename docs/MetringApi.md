@@ -18,8 +18,8 @@ Insert API metering data
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.MeteringApi;
+//import io.revenium.metering.invoker.ApiException;
+//import io.revenium.metering.api.MeteringApi;
 
 
 MetringApi apiInstance = new MetringApi();
@@ -63,8 +63,8 @@ Determine if a ProductKey is valid or not
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.MeteringApi;
+//import io.revenium.metering.invoker.ApiException;
+//import io.revenium.metering.api.MeteringApi;
 
 
 MetringApi apiInstance = new MetringApi();

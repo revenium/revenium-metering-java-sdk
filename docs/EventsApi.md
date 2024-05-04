@@ -17,8 +17,8 @@ Save an API event
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.EventsApi;
+//import io.revenium.metering.invoker.ApiException;
+//import io.revenium.metering.api.EventsApi;
 
 
 EventsApi apiInstance = new EventsApi();

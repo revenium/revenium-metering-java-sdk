@@ -34,21 +34,21 @@ The following demonstrates how to use the SDK to send metering data to the Reven
 @Configuration
 public class GreetingConfiguration {
 
-  String apiKey;
-  String meteringHost = "https://api.revenium.io/meter/v1/api";
+    String apiKey;
+    String meteringHost = "https://api.dev.hcapp.io/meter/v1/api";
 
-  GreetingConfiguration(@Value("${revenium.api.key:") String apiKey) {
-    this.apiKey = apiKey;
-  }
+    GreetingConfiguration(@Value("${revenium.api.key:") String apiKey) {
+        this.apiKey = apiKey;
+    }
 
-  @Bean
-  @Scope("singleton")
-  MeteringApi metering() {
-    ApiClient client = new ApiClient();
-    client.setBasePath(meteringHost);
-    client.setApiKey(apiKey);
-    return new MeteringApi(client);
-  }
+    @Bean
+    @Scope("singleton")
+    MeteringApi metering() {
+        ApiClient client = new ApiClient();
+        client.addDefaultHeader("x-api-key", apiKey);
+        client.setBasePath(meteringHost);
+        return new MeteringApi(client);
+    }
 }
 ```
 

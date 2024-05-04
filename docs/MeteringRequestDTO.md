@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**api** | **String** | URL of API |  [optional]
+**api** | **String** |  |  [optional]
 **productKey** | **String** | The Product Key ID |  [optional]
 **application** | **String** | The Application ID |  [optional]
 **method** | **String** | The HTTP method being invoked | 
@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 **timedOut** | **Boolean** | Whether or not the backend timed out |  [optional]
 **requestMessageSize** | **Long** | The size of the API request in bytes |  [optional]
 **responseMessageSize** | **Long** | The size of the API response in bytes |  [optional]
-**requestHeaders** | **List&lt;String&gt;** | The comma seperated list of names of the headers in the request  | [can be an empty list]
-**responseHeaders** | **List&lt;String&gt;** | The comma seperated list of names of the headers in the response | [can be an empty list]
+**requestHeaders** | **List&lt;String&gt;** | The comma seperated list of names of the headers in the request | 
+**responseHeaders** | **List&lt;String&gt;** | The comma seperated list of names of the headers in the response | 
 **userAgent** | **String** | The HTTP User Agent |  [optional]
 **remoteUser** | **String** | The Remote User |  [optional]
 **remoteHost** | **String** | The Remote Host |  [optional]
