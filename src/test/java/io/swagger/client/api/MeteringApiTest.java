@@ -18,19 +18,13 @@ import org.junit.Test;
 import org.junit.Ignore;
 
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-
 /**
  * API tests for MetringApi
  */
 @Ignore
-public class MetringApiTest {
+public class MeteringApiTest {
 
-    private final MetringApi api = new MetringApi();
+    private final MeteringApi api = new MeteringApi();
 
     /**
      * Insert API metering data

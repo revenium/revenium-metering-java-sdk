@@ -35,14 +35,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MetringApi {
+public class MeteringApi {
     private ApiClient apiClient;
 
-    public MetringApi() {
+    public MeteringApi() {
         this(Configuration.getDefaultApiClient());
     }
 
-    public MetringApi(ApiClient apiClient) {
+    public MeteringApi(ApiClient apiClient) {
         this.apiClient = apiClient;
     }
 

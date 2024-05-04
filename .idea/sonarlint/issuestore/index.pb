@@ -311,3 +311,11 @@ w
 G.idea/sonarlint/issuestore/f/e/fed3aea2b65b8cf49e160915f3ed65e3f582be09,0/5/05358e55f7f4c5c7ea577fcd73ac63b2b9b76a18
 w
 G.idea/sonarlint/issuestore/3/4/3462a9eab780a0494eae4125a3b1a133c7b1a1ee,7/4/74038f6c5b5909af81cb6d04e342ac60a492e14b
+d
+4src/main/java/io/swagger/client/api/MeteringApi.java,b/8/b8d546bc66f764ac84e834fcae377f20052fa94b
+B
+docs/MetringApi.md,5/9/590ef304f900e3dd041cb40fbf7105ea620caaf7
+h
+8src/test/java/io/swagger/client/api/MeteringApiTest.java,7/8/78b32b5162b5b6019eebff186a1e3bef0c6a2d5b
+Å
+Q.idea/sonarlint/securityhotspotstore/b/8/b8d546bc66f764ac84e834fcae377f20052fa94b,3/2/32107d6b0b0c072aa59c1a85af60cc456943048a

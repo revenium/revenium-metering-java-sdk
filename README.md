@@ -75,7 +75,7 @@ Please follow the [installation](#installation) instruction and execute the foll
 package org.example;
 import io.swagger.client.*;
 import io.swagger.client.model.*;
-import io.swagger.client.api.MetringApi;
+import io.swagger.client.api.MeteringApi;
 
 import java.util.Collections;
 

@@ -19,7 +19,7 @@ Insert API metering data
 ```java
 // Import classes:
 //import io.swagger.client.ApiException;
-//import io.swagger.client.api.MetringApi;
+//import io.swagger.client.api.MeteringApi;
 
 
 MetringApi apiInstance = new MetringApi();
@@ -64,7 +64,7 @@ Determine if a ProductKey is valid or not
 ```java
 // Import classes:
 //import io.swagger.client.ApiException;
-//import io.swagger.client.api.MetringApi;
+//import io.swagger.client.api.MeteringApi;
 
 
 MetringApi apiInstance = new MetringApi();
