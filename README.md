@@ -10,10 +10,9 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>io.revenium</groupId>
-  <artifactId>revenium-metering</artifactId>
-  <version>1.0.0</version>
-  <scope>compile</scope>
+    <groupId>io.revenium.metering</groupId>
+    <artifactId>revenium-metering-sdk</artifactId>
+    <version>1.0.0</version>
 </dependency>
 ```
 
@@ -22,7 +21,11 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "io.revenium:revenium-metering:1.0.0"
+implementation group: 'io.revenium.metering', name: 'revenium-metering-sdk', version: '1.0.0'
+```
+
+```kotlin
+implementation("io.revenium.metering:revenium-metering-sdk:1.0.0")
 ```
 
 ## Getting Started
