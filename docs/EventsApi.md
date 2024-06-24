@@ -4,13 +4,13 @@ All URIs are relative to *https://api.revenium.io/meter/v1/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**saveEvent**](EventsApi.md#saveEvent) | **POST** /event | Save can API event
+[**saveEvent**](EventsApi.md#saveEvent) | **POST** /event | Save an API event
 
 <a name="saveEvent"></a>
 # **saveEvent**
 > saveEvent(body)
 
-Save can API event
+Save an API event
 
 Save an API event
 

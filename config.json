@@ -1,0 +1,9 @@
+{
+  "groupId": "io.revenium.metering",
+  "artifactId": "revenium-metering-sdk",
+  "artifactVersion": "1.0.1-SNAPSHOT",
+  "apiPackage": "io.revenium.metering.api",
+  "modelPackage": "io.revenium.metering.model",
+  "invokerPackage": "io.revenium.metering.invoker",
+  "library": "okhttp4-gson"
+}
