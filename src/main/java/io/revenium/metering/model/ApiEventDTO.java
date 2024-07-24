@@ -23,11 +23,13 @@ import io.swagger.v3.oas.annotations.media.Schema;
 
 import javax.annotation.processing.Generated;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 /**
  * ApiEventDTO
  */
 
-@Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-06-24T17:45:06.486145-04:00[America/New_York]")
+@Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-07-24T15:37:29.173088-04:00[America/New_York]")
 
 public class ApiEventDTO {
   @SerializedName("requestId")
@@ -132,6 +134,9 @@ public class ApiEventDTO {
 
   @SerializedName("source")
   private String source = null;
+
+  @SerializedName("elements")
+  private List<ElementDTO> elements = new ArrayList<ElementDTO>();
 
   public ApiEventDTO requestId(String requestId) {
     this.requestId = requestId;
@@ -493,6 +498,29 @@ public class ApiEventDTO {
     this.source = source;
   }
 
+  public ApiEventDTO elements(List<ElementDTO> elements) {
+    this.elements = elements;
+    return this;
+  }
+
+  public ApiEventDTO addElementsItem(ElementDTO elementsItem) {
+    this.elements.add(elementsItem);
+    return this;
+  }
+
+   /**
+   * Get elements
+   * @return elements
+  **/
+  @Schema(required = true, description = "")
+  public List<ElementDTO> getElements() {
+    return elements;
+  }
+
+  public void setElements(List<ElementDTO> elements) {
+    this.elements = elements;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -522,12 +550,13 @@ public class ApiEventDTO {
         Objects.equals(this.correlationId, apiEventDTO.correlationId) &&
         Objects.equals(this.backendLatency, apiEventDTO.backendLatency) &&
         Objects.equals(this.clientId, apiEventDTO.clientId) &&
-        Objects.equals(this.source, apiEventDTO.source);
+        Objects.equals(this.source, apiEventDTO.source) &&
+        Objects.equals(this.elements, apiEventDTO.elements);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(requestId, eventType, assetId, productKey, application, method, currentMillis, uri, elapsedTime, metadata, responseCode, requestMessageSize, responseMessageSize, contentType, remoteHost, userAgent, correlationId, backendLatency, clientId, source);
+    return Objects.hash(requestId, eventType, assetId, productKey, application, method, currentMillis, uri, elapsedTime, metadata, responseCode, requestMessageSize, responseMessageSize, contentType, remoteHost, userAgent, correlationId, backendLatency, clientId, source, elements);
   }
 
 
@@ -556,6 +585,7 @@ public class ApiEventDTO {
     sb.append("    backendLatency: ").append(toIndentedString(backendLatency)).append("\n");
     sb.append("    clientId: ").append(toIndentedString(clientId)).append("\n");
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
+    sb.append("    elements: ").append(toIndentedString(elements)).append("\n");
     sb.append("}");
     return sb.toString();
   }

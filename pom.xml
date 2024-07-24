@@ -94,6 +94,7 @@
                 </executions>
             </plugin>
 
+            <!-- attach test jar -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -124,8 +125,7 @@
                         <configuration>
                             <sources>
                                 <source>
-                                    src/main/java
-                                </source>
+                                src/main/java</source>
                             </sources>
                         </configuration>
                     </execution>
@@ -138,8 +138,7 @@
                         <configuration>
                             <sources>
                                 <source>
-                                    src/test/java
-                                </source>
+                                src/test/java</source>
                             </sources>
                         </configuration>
                     </execution>

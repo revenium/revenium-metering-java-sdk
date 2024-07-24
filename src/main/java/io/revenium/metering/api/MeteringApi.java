@@ -58,12 +58,13 @@ public class MeteringApi {
      * @param body  (required)
      * @param xReveniumSubscriptionId  (optional)
      * @param xReveniumSourceId  (optional)
+     * @param xReveniumSourceType  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call ingestCall(String body, String xReveniumSubscriptionId, String xReveniumSourceId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call ingestCall(String body, String xReveniumSubscriptionId, String xReveniumSourceId, String xReveniumSourceType, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
 
         // create path and map variables
@@ -77,6 +78,8 @@ public class MeteringApi {
         localVarHeaderParams.put("x-revenium-subscription-id", apiClient.parameterToString(xReveniumSubscriptionId));
         if (xReveniumSourceId != null)
         localVarHeaderParams.put("x-revenium-source-id", apiClient.parameterToString(xReveniumSourceId));
+        if (xReveniumSourceType != null)
+        localVarHeaderParams.put("x-revenium-source-type", apiClient.parameterToString(xReveniumSourceType));
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
@@ -109,13 +112,13 @@ public class MeteringApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ingestValidateBeforeCall(String body, String xReveniumSubscriptionId, String xReveniumSourceId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call ingestValidateBeforeCall(String body, String xReveniumSubscriptionId, String xReveniumSourceId, String xReveniumSourceType, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling ingest(Async)");
         }
 
-        okhttp3.Call call = ingestCall(body, xReveniumSubscriptionId, xReveniumSourceId, progressListener, progressRequestListener);
+        okhttp3.Call call = ingestCall(body, xReveniumSubscriptionId, xReveniumSourceId, xReveniumSourceType, progressListener, progressRequestListener);
         return call;
 
     }
@@ -126,11 +129,12 @@ public class MeteringApi {
      * @param body  (required)
      * @param xReveniumSubscriptionId  (optional)
      * @param xReveniumSourceId  (optional)
+     * @param xReveniumSourceType  (optional)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object ingest(String body, String xReveniumSubscriptionId, String xReveniumSourceId) throws ApiException {
-        ApiResponse<Object> resp = ingestWithHttpInfo(body, xReveniumSubscriptionId, xReveniumSourceId);
+    public Object ingest(String body, String xReveniumSubscriptionId, String xReveniumSourceId, String xReveniumSourceType) throws ApiException {
+        ApiResponse<Object> resp = ingestWithHttpInfo(body, xReveniumSubscriptionId, xReveniumSourceId, xReveniumSourceType);
         return resp.getData();
     }
 
@@ -140,11 +144,12 @@ public class MeteringApi {
      * @param body  (required)
      * @param xReveniumSubscriptionId  (optional)
      * @param xReveniumSourceId  (optional)
+     * @param xReveniumSourceType  (optional)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> ingestWithHttpInfo(String body, String xReveniumSubscriptionId, String xReveniumSourceId) throws ApiException {
-        okhttp3.Call call = ingestValidateBeforeCall(body, xReveniumSubscriptionId, xReveniumSourceId, null, null);
+    public ApiResponse<Object> ingestWithHttpInfo(String body, String xReveniumSubscriptionId, String xReveniumSourceId, String xReveniumSourceType) throws ApiException {
+        okhttp3.Call call = ingestValidateBeforeCall(body, xReveniumSubscriptionId, xReveniumSourceId, xReveniumSourceType, null, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -155,11 +160,12 @@ public class MeteringApi {
      * @param body  (required)
      * @param xReveniumSubscriptionId  (optional)
      * @param xReveniumSourceId  (optional)
+     * @param xReveniumSourceType  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call ingestAsync(String body, String xReveniumSubscriptionId, String xReveniumSourceId, final ApiCallback<Object> callback) throws ApiException {
+    public okhttp3.Call ingestAsync(String body, String xReveniumSubscriptionId, String xReveniumSourceId, String xReveniumSourceType, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -180,7 +186,7 @@ public class MeteringApi {
             };
         }
 
-        okhttp3.Call call = ingestValidateBeforeCall(body, xReveniumSubscriptionId, xReveniumSourceId, progressListener, progressRequestListener);
+        okhttp3.Call call = ingestValidateBeforeCall(body, xReveniumSubscriptionId, xReveniumSourceId, xReveniumSourceType, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

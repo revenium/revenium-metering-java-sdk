@@ -14,7 +14,7 @@ package io.revenium.metering.invoker;
 
 import javax.annotation.processing.Generated;
 
-@Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-06-24T17:45:06.486145-04:00[America/New_York]")
+@Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-07-24T15:37:29.173088-04:00[America/New_York]")
 public class Pair {
     private String name = "";
     private String value = "";

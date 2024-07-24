@@ -44,7 +44,8 @@ public class MeteringApiTest {
         String body = null;
         String xReveniumSubscriptionId = null;
         String xReveniumSourceId = null;
-        Object response = api.ingest(body, xReveniumSubscriptionId, xReveniumSourceId);
+        String xReveniumSourceType = null;
+        Object response = api.ingest(body, xReveniumSubscriptionId, xReveniumSourceId, xReveniumSourceType);
 
         // TODO: test validations
     }

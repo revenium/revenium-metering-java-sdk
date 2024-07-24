@@ -30,7 +30,7 @@ import java.util.List;
  * The metering request object
  */
 @Schema(description = "The metering request object")
-@Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-06-24T17:45:06.486145-04:00[America/New_York]")
+@Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-07-24T15:37:29.173088-04:00[America/New_York]")
 
 public class MeteringRequestDTO {
   @SerializedName("api")
@@ -101,6 +101,9 @@ public class MeteringRequestDTO {
 
   @SerializedName("source")
   private String source = null;
+
+  @SerializedName("monetized")
+  private Boolean monetized = null;
 
   public MeteringRequestDTO api(String api) {
     this.api = api;
@@ -531,6 +534,24 @@ public class MeteringRequestDTO {
     this.source = source;
   }
 
+  public MeteringRequestDTO monetized(Boolean monetized) {
+    this.monetized = monetized;
+    return this;
+  }
+
+   /**
+   * Whether the event is monetizable or not
+   * @return monetized
+  **/
+  @Schema(example = "true", required = true, description = "Whether the event is monetizable or not")
+  public Boolean isMonetized() {
+    return monetized;
+  }
+
+  public void setMonetized(Boolean monetized) {
+    this.monetized = monetized;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -563,12 +584,13 @@ public class MeteringRequestDTO {
         Objects.equals(this.correlationId, meteringRequestDTO.correlationId) &&
         Objects.equals(this.platformAPIKey, meteringRequestDTO.platformAPIKey) &&
         Objects.equals(this.elements, meteringRequestDTO.elements) &&
-        Objects.equals(this.source, meteringRequestDTO.source);
+        Objects.equals(this.source, meteringRequestDTO.source) &&
+        Objects.equals(this.monetized, meteringRequestDTO.monetized);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(api, productKey, application, method, url, metadata, backendLatency, gatewayLatency, responseCode, timedOut, requestMessageSize, responseMessageSize, requestHeaders, responseHeaders, userAgent, remoteUser, remoteHost, httpProtocol, contentType, correlationId, platformAPIKey, elements, source);
+    return Objects.hash(api, productKey, application, method, url, metadata, backendLatency, gatewayLatency, responseCode, timedOut, requestMessageSize, responseMessageSize, requestHeaders, responseHeaders, userAgent, remoteUser, remoteHost, httpProtocol, contentType, correlationId, platformAPIKey, elements, source, monetized);
   }
 
 
@@ -600,6 +622,7 @@ public class MeteringRequestDTO {
     sb.append("    platformAPIKey: ").append(toIndentedString(platformAPIKey)).append("\n");
     sb.append("    elements: ").append(toIndentedString(elements)).append("\n");
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
+    sb.append("    monetized: ").append(toIndentedString(monetized)).append("\n");
     sb.append("}");
     return sb.toString();
   }

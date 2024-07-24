@@ -2,7 +2,7 @@
 
 Revenium Metering API
 - API version: 1.16.0-SNAPSHOT
-  - Build date: 2024-06-24T17:45:06.486145-04:00[America/New_York]
+  - Build date: 2024-07-24T15:37:29.173088-04:00[America/New_York]
 
 Revenium Metering API
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>io.revenium.metering</groupId>
   <artifactId>revenium-metering-sdk</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -51,7 +51,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "io.revenium.metering:revenium-metering-sdk:1.0.0"
+compile "io.revenium.metering:revenium-metering-sdk:1.0.1-SNAPSHOT"
 ```
 
 ### Others
@@ -64,7 +64,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/revenium-metering-sdk-1.0.0.jar`
+* `target/revenium-metering-sdk-1.0.1-SNAPSHOT.jar`
 * `target/lib/*.jar`
 
 ## Getting Started

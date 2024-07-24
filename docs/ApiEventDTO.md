@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **backendLatency** | **Double** |  |  [optional]
 **clientId** | **String** |  |  [optional]
 **source** | **String** |  |  [optional]
+**elements** | [**List&lt;ElementDTO&gt;**](ElementDTO.md) |  | 
 
 <a name="EventTypeEnum"></a>
 ## Enum: EventTypeEnum

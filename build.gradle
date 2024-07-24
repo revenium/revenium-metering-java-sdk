@@ -2,7 +2,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 group = 'io.revenium.metering'
-version = '1.0.0'
+version = '1.0.1-SNAPSHOT'
 
 buildscript {
     repositories {
@@ -15,6 +15,7 @@ buildscript {
 }
 
 repositories {
+    mavenCentral()
     jcenter()
 }
 
@@ -78,8 +79,8 @@ if(hasProperty('target') && target == 'android') {
     apply plugin: 'java'
     apply plugin: 'maven-publish'
 
-    sourceCompatibility = JavaVersion.VERSION_1_7
-    targetCompatibility = JavaVersion.VERSION_1_7
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 
     publishing {
         publications {
@@ -97,9 +98,9 @@ if(hasProperty('target') && target == 'android') {
 }
 
 dependencies {
-    implementation 'io.swagger:swagger-annotations:1.6.9'
-    implementation 'com.squareup.okhttp:okhttp:4.10.0'
-    implementation 'com.squareup.okhttp:logging-interceptor:4.10.0'
+    implementation 'io.swagger.core.v3:swagger-annotations:2.2.22'
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'
     implementation 'com.google.code.gson:gson:2.10.1'
     implementation 'io.gsonfire:gson-fire:1.8.5'
     implementation 'org.threeten:threetenbp:1.6.5'
