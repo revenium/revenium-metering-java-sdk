@@ -27,6 +27,7 @@ import java.io.IOException;
 
 
 import io.revenium.metering.model.MeteringRequestDTO;
+import io.revenium.metering.model.RatingEventDTO;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -56,9 +57,9 @@ public class MeteringApi {
     /**
      * Build call for ingest
      * @param body  (required)
-     * @param xReveniumSubscriptionId  (optional)
-     * @param xReveniumSourceId  (optional)
-     * @param xReveniumSourceType  (optional)
+     * @param xReveniumSubscriptionId The subscription id for the metered data (required)
+     * @param xReveniumSourceId The source id for the metered data (required)
+     * @param xReveniumSourceType The source type for the metered data (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -107,7 +108,7 @@ public class MeteringApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "x-api-key" };
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
@@ -117,6 +118,14 @@ public class MeteringApi {
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling ingest(Async)");
         }
+        // verify the required parameter 'xReveniumSubscriptionId' is set
+        if (xReveniumSubscriptionId == null) {
+            throw new ApiException("Missing the required parameter 'xReveniumSubscriptionId' when calling ingest(Async)");
+        }
+        // verify the required parameter 'xReveniumSourceId' is set
+        if (xReveniumSourceId == null) {
+            throw new ApiException("Missing the required parameter 'xReveniumSourceId' when calling ingest(Async)");
+        }
 
         okhttp3.Call call = ingestCall(body, xReveniumSubscriptionId, xReveniumSourceId, xReveniumSourceType, progressListener, progressRequestListener);
         return call;
@@ -124,12 +133,12 @@ public class MeteringApi {
     }
 
     /**
-     * 
-     * 
+     * Ingest raw JSON metering data
+     * Ingest raw JSON metering data
      * @param body  (required)
-     * @param xReveniumSubscriptionId  (optional)
-     * @param xReveniumSourceId  (optional)
-     * @param xReveniumSourceType  (optional)
+     * @param xReveniumSubscriptionId The subscription id for the metered data (required)
+     * @param xReveniumSourceId The source id for the metered data (required)
+     * @param xReveniumSourceType The source type for the metered data (optional)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -139,12 +148,12 @@ public class MeteringApi {
     }
 
     /**
-     * 
-     * 
+     * Ingest raw JSON metering data
+     * Ingest raw JSON metering data
      * @param body  (required)
-     * @param xReveniumSubscriptionId  (optional)
-     * @param xReveniumSourceId  (optional)
-     * @param xReveniumSourceType  (optional)
+     * @param xReveniumSubscriptionId The subscription id for the metered data (required)
+     * @param xReveniumSourceId The source id for the metered data (required)
+     * @param xReveniumSourceType The source type for the metered data (optional)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -155,12 +164,12 @@ public class MeteringApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Ingest raw JSON metering data (asynchronously)
+     * Ingest raw JSON metering data
      * @param body  (required)
-     * @param xReveniumSubscriptionId  (optional)
-     * @param xReveniumSourceId  (optional)
-     * @param xReveniumSourceType  (optional)
+     * @param xReveniumSubscriptionId The subscription id for the metered data (required)
+     * @param xReveniumSourceId The source id for the metered data (required)
+     * @param xReveniumSourceType The source type for the metered data (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -236,7 +245,7 @@ public class MeteringApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "x-api-key" };
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
@@ -312,6 +321,126 @@ public class MeteringApi {
         return call;
     }
     /**
+     * Build call for rate
+     * @param body  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public okhttp3.Call rateCall(RatingEventDTO body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = body;
+
+        // create path and map variables
+        String localVarPath = "/meter/rate";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "*/*"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
+                @Override
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "x-api-key" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call rateValidateBeforeCall(RatingEventDTO body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new ApiException("Missing the required parameter 'body' when calling rate(Async)");
+        }
+
+        okhttp3.Call call = rateCall(body, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Submit rating events
+     * Submit rating events
+     * @param body  (required)
+     * @return Object
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public Object rate(RatingEventDTO body) throws ApiException {
+        ApiResponse<Object> resp = rateWithHttpInfo(body);
+        return resp.getData();
+    }
+
+    /**
+     * Submit rating events
+     * Submit rating events
+     * @param body  (required)
+     * @return ApiResponse&lt;Object&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Object> rateWithHttpInfo(RatingEventDTO body) throws ApiException {
+        okhttp3.Call call = rateValidateBeforeCall(body, null, null);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Submit rating events (asynchronously)
+     * Submit rating events
+     * @param body  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public okhttp3.Call rateAsync(RatingEventDTO body, final ApiCallback<Object> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        okhttp3.Call call = rateValidateBeforeCall(body, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
      * Build call for valid
      * @param productKey The product key (optional)
      * @param application The application ID (optional)
@@ -361,7 +490,7 @@ public class MeteringApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "x-api-key" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 

@@ -17,9 +17,19 @@ Save an API event
 ### Example
 ```java
 // Import classes:
+//import io.revenium.metering.invoker.ApiClient;
 //import io.revenium.metering.invoker.ApiException;
+//import io.revenium.metering.invoker.Configuration;
+//import io.revenium.metering.invoker.auth.*;
 //import io.revenium.metering.api.EventsApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: x-api-key
+ApiKeyAuth x-api-key = (ApiKeyAuth) defaultClient.getAuthentication("x-api-key");
+x-api-key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//x-api-key.setApiKeyPrefix("Token");
 
 EventsApi apiInstance = new EventsApi();
 ApiEventDTO body = new ApiEventDTO(); // ApiEventDTO | 
@@ -43,7 +53,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[x-api-key](../README.md#x-api-key)
 
 ### HTTP request headers
 

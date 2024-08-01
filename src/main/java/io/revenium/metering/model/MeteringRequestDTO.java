@@ -105,6 +105,9 @@ public class MeteringRequestDTO {
   @SerializedName("monetized")
   private Boolean monetized = null;
 
+  @SerializedName("callCount")
+  private Integer callCount = 1;
+
   public MeteringRequestDTO api(String api) {
     this.api = api;
     return this;
@@ -552,6 +555,24 @@ public class MeteringRequestDTO {
     this.monetized = monetized;
   }
 
+  public MeteringRequestDTO callCount(Integer callCount) {
+    this.callCount = callCount;
+    return this;
+  }
+
+   /**
+   * The amount of API calls to count
+   * @return callCount
+  **/
+  @Schema(example = "10", description = "The amount of API calls to count")
+  public Integer getCallCount() {
+    return callCount;
+  }
+
+  public void setCallCount(Integer callCount) {
+    this.callCount = callCount;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -585,12 +606,13 @@ public class MeteringRequestDTO {
         Objects.equals(this.platformAPIKey, meteringRequestDTO.platformAPIKey) &&
         Objects.equals(this.elements, meteringRequestDTO.elements) &&
         Objects.equals(this.source, meteringRequestDTO.source) &&
-        Objects.equals(this.monetized, meteringRequestDTO.monetized);
+        Objects.equals(this.monetized, meteringRequestDTO.monetized) &&
+        Objects.equals(this.callCount, meteringRequestDTO.callCount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(api, productKey, application, method, url, metadata, backendLatency, gatewayLatency, responseCode, timedOut, requestMessageSize, responseMessageSize, requestHeaders, responseHeaders, userAgent, remoteUser, remoteHost, httpProtocol, contentType, correlationId, platformAPIKey, elements, source, monetized);
+    return Objects.hash(api, productKey, application, method, url, metadata, backendLatency, gatewayLatency, responseCode, timedOut, requestMessageSize, responseMessageSize, requestHeaders, responseHeaders, userAgent, remoteUser, remoteHost, httpProtocol, contentType, correlationId, platformAPIKey, elements, source, monetized, callCount);
   }
 
 
@@ -623,6 +645,7 @@ public class MeteringRequestDTO {
     sb.append("    elements: ").append(toIndentedString(elements)).append("\n");
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    monetized: ").append(toIndentedString(monetized)).append("\n");
+    sb.append("    callCount: ").append(toIndentedString(callCount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

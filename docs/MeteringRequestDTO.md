@@ -27,3 +27,4 @@ Name | Type | Description | Notes
 **elements** | [**List&lt;ElementDTO&gt;**](ElementDTO.md) | Dynamic metering elements | 
 **source** | **String** | the source of the event |  [optional]
 **monetized** | **Boolean** | Whether the event is monetizable or not | 
+**callCount** | **Integer** | The amount of API calls to count |  [optional]

@@ -13,6 +13,7 @@
 package io.revenium.metering.api;
 
 import io.revenium.metering.model.MeteringRequestDTO;
+import io.revenium.metering.model.RatingEventDTO;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -32,9 +33,9 @@ public class MeteringApiTest {
     private final MeteringApi api = new MeteringApi();
 
     /**
-     * 
+     * Ingest raw JSON metering data
      *
-     * 
+     * Ingest raw JSON metering data
      *
      * @throws Exception
      *          if the Api call fails
@@ -61,6 +62,21 @@ public class MeteringApiTest {
     public void meterTest() throws Exception {
         MeteringRequestDTO body = null;
         Object response = api.meter(body);
+
+        // TODO: test validations
+    }
+    /**
+     * Submit rating events
+     *
+     * Submit rating events
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void rateTest() throws Exception {
+        RatingEventDTO body = null;
+        Object response = api.rate(body);
 
         // TODO: test validations
     }
