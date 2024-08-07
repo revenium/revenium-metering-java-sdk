@@ -80,7 +80,7 @@ public class GreetingController {
         MeteringRequestDTO request = new MeteringRequestDTO();
         request.method(method); //required
         request.url(url); //required
-        request.application(clientId); //required
+        request.subscriberCredentials(clientId); //required
         request.setResponseCode(200); //required
         request.setRequestHeaders(Collections.emptyList());
         request.setResponseHeaders(Collections.emptyList());

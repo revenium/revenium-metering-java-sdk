@@ -37,10 +37,10 @@ public class MeteringRequestDTO {
   private String api = null;
 
   @SerializedName("productKey")
-  private String productKey = null;
+  private String subscription = null;
 
   @SerializedName("application")
-  private String application = null;
+  private String subscriberCredentials = null;
 
   @SerializedName("method")
   private String method = null;
@@ -120,8 +120,8 @@ public class MeteringRequestDTO {
     this.api = api;
   }
 
-  public MeteringRequestDTO productKey(String productKey) {
-    this.productKey = productKey;
+  public MeteringRequestDTO subscription(String subscription) {
+    this.subscription = subscription;
     return this;
   }
 
@@ -131,15 +131,15 @@ public class MeteringRequestDTO {
   **/
   @Schema(example = "53546bb0-9014-11eb-a8b3-0242ac130003", description = "The Product Key ID")
   public String getProductKey() {
-    return productKey;
+    return subscription;
   }
 
   public void setProductKey(String productKey) {
-    this.productKey = productKey;
+    this.subscription = productKey;
   }
 
-  public MeteringRequestDTO application(String application) {
-    this.application = application;
+  public MeteringRequestDTO subscriberCredentials(String subscriberCredentials) {
+    this.subscriberCredentials = subscriberCredentials;
     return this;
   }
 
@@ -149,11 +149,11 @@ public class MeteringRequestDTO {
   **/
   @Schema(example = "53546bb0-9014-11eb-a8b3-0242ac130003", description = "The Application ID")
   public String getApplication() {
-    return application;
+    return subscriberCredentials;
   }
 
   public void setApplication(String application) {
-    this.application = application;
+    this.subscriberCredentials = application;
   }
 
   public MeteringRequestDTO method(String method) {
@@ -542,8 +542,8 @@ public class MeteringRequestDTO {
     }
     MeteringRequestDTO meteringRequestDTO = (MeteringRequestDTO) o;
     return Objects.equals(this.api, meteringRequestDTO.api) &&
-        Objects.equals(this.productKey, meteringRequestDTO.productKey) &&
-        Objects.equals(this.application, meteringRequestDTO.application) &&
+        Objects.equals(this.subscription, meteringRequestDTO.subscription) &&
+        Objects.equals(this.subscriberCredentials, meteringRequestDTO.subscriberCredentials) &&
         Objects.equals(this.method, meteringRequestDTO.method) &&
         Objects.equals(this.url, meteringRequestDTO.url) &&
         Objects.equals(this.metadata, meteringRequestDTO.metadata) &&
@@ -568,7 +568,7 @@ public class MeteringRequestDTO {
 
   @Override
   public int hashCode() {
-    return Objects.hash(api, productKey, application, method, url, metadata, backendLatency, gatewayLatency, responseCode, timedOut, requestMessageSize, responseMessageSize, requestHeaders, responseHeaders, userAgent, remoteUser, remoteHost, httpProtocol, contentType, correlationId, platformAPIKey, elements, source);
+    return Objects.hash(api, subscription, subscriberCredentials, method, url, metadata, backendLatency, gatewayLatency, responseCode, timedOut, requestMessageSize, responseMessageSize, requestHeaders, responseHeaders, userAgent, remoteUser, remoteHost, httpProtocol, contentType, correlationId, platformAPIKey, elements, source);
   }
 
 
@@ -578,8 +578,8 @@ public class MeteringRequestDTO {
     sb.append("class MeteringRequestDTO {\n");
     
     sb.append("    api: ").append(toIndentedString(api)).append("\n");
-    sb.append("    productKey: ").append(toIndentedString(productKey)).append("\n");
-    sb.append("    application: ").append(toIndentedString(application)).append("\n");
+    sb.append("    subscription: ").append(toIndentedString(subscription)).append("\n");
+    sb.append("    subscriberCredentials: ").append(toIndentedString(subscriberCredentials)).append("\n");
     sb.append("    method: ").append(toIndentedString(method)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
